@@ -1,4 +1,6 @@
-<center><img src="logo.png"></img></center>
+<p align="center">
+<img src="logo.png"></img></p>
+
 ### Personal Profile for Lucas Burlingham
 
 
