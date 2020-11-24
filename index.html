@@ -14,7 +14,6 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="20 days">
     <meta name="author" content="Lucas Burlingham">
-https://preview.redd.it/pupoel6zyt061.jpg?width=640&crop=smart&auto=webp&s=2c5235b5265a0c9d70e4f9d134ebade770caa505
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -47,45 +46,72 @@ https://preview.redd.it/pupoel6zyt061.jpg?width=640&crop=smart&auto=webp&s=2c523
                 <a class="btn btn-primary btn-md" href="https://my.indeed.com/p/lucasb-1g9vcma" target="_blank"
                     role="button">Indeed
                     Profile</a>
-                <a class="btn btn-primary btn-md" href="https://my.indeed.com/p/lucasb-1g9vcma" target="_blank"
+                <a class="btn btn-primary btn-md" href="https://www.linkedin.com/in/lucas-burlingham" target="_blank"
                     role="button">Linkedin
                     Profile</a>
             </p>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <iframe id="ghcard-lucasburlingham-1" frameborder="0" scrolling="0" allowtransparency="true"
                     src="https://lucasburlingham.netlify.app/medium.html" width="400" height="316"></iframe>
             </div>
-            <div class="col">
-                <!-- Linkedin Profile Badge: https://www.linkedin.com/badges/profile/create?vanityname=lucas-burlingham&preferredlocale=en_US&trk=public_profile_badge -->
-
-                <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"
-                    data-type="vertical" data-theme="dark" data-vanity="lucas-burlingham">
-                    <a class="LI-simple-link"
-                        href='https://www.linkedin.com/in/lucas-burlingham?trk=profile-badge'>Lucas
-                        Burlingham</a></div>
-            </div>
+            <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical"
+                data-theme="dark" data-vanity="lucas-burlingham">
+                <a class="LI-simple-link" href='https://www.linkedin.com/in/lucas-burlingham?trk=profile-badge'>Lucas
+                    Burlingham</a></div>
         </div>
     </div>
+    </div> -->
     <br>
     <div id="contact">
         <div class="jumbotron jumbotron-fluid bg-secondary">
+
             <div class="container">
-                <h5 class="display-5 text-light">How to contact:</h5>
-                <hr class="my-2">
-                <p class="text-dark">By Email: <span><kbd>lucas.burlingham@icloud.com</kbd></span>
-                </p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-md" href="mailto:lucas.burlingham@icloud.com" role="button">Email</a>
-                </p>
-                <p class="text-dark">By text: <kbd>(812) 214-5721</kbd></p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-md" href="sms:8122145721" role="button">Text</a>
-                </p>
+                <div class="col-md-12 col-md-offset-3">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" id="contactForm">
+                            <fieldset>
+                                <legend class="text-center">Leave a message:</legend>
+                                <div class="form-group">
+                                    <label class="control-label" for="name">Name</label>
+                                    <div class="form-group">
+                                        <div class="col">
+                                            <input id="name" name="name" type="text" placeholder="Your name"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Your E-mail</label>
+                                    <div class="col">
+                                        <input id="email" name="email" type="text" placeholder="Your email"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" for="message">Your message</label>
+                                    <div class="col">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Please enter your message here..." rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col text-right" id="submitArea">
+                                        <button class="btn btn-primary btn-lg" id="submitButton"
+                                            onclick="confetti()">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +126,48 @@ https://preview.redd.it/pupoel6zyt061.jpg?width=640&crop=smart&auto=webp&s=2c523
     </script>
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+    <script>
+        var frm = $('#contactForm');
+
+        document.getElementById("submitButton").onclick = addElement;
+
+        function addElement() {
+            // create a new div element
+            const newDiv = document.createElement("div");
+
+            // and give it some content
+            const newContent = document.createTextNode("Form Submitted");
+            confetti();
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById("div1");
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+        frm.submit(function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "http://cloud.golca.org/personalprofile/requests.php",
+                data: frm.serialize(),
+                success: function (data) {
+                    document.getElementById("submitArea").removeChild("submitButton");
+                    document.createTextNode("Form Submitted!");
+                    console.log('Submission was successful.');
+                    console.log(data);
+                    confetti();
+                },
+                error: function (data) {
+                    console.log('An error occurred. ');
+                    console.log(data);
+                },
+            });
+        });
+    </script>
 </body>
 
 </html>
