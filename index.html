@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="col-md-12 col-md-offset-3">
                     <div class="well well-sm">
-                        <form class="form-horizontal" id="contactForm" action="http://cloud.golca.org/requests.php"
+                        <form class="form-horizontal" id="contactForm" action="https://cloud.golca.org/requests.php"
                             method="POST">
                             <fieldset>
                                 <legend class="text-center">Leave a message:</legend>
@@ -105,8 +105,8 @@
 
                                 <div class="form-group">
                                     <div class="col text-right" id="submitArea">
-                                        <button class="btn btn-primary btn-lg" id="submitButton"
-                                            onclick="confetti()">Submit</button>
+                                        <button class="btn btn-primary btn-lg" id="submitButton" onclick="confetti()"
+                                            type="submit">Submit</button>
                                     </div>
                                 </div>
                             </fieldset>
@@ -141,12 +141,13 @@
 
             $.ajax({
                 type: "POST",
-                url: "http://cloud.golca.org/personalprofile/requests.php",
+                url: "https://cloud.golca.org/requests.php",
                 data: frm.serialize(),
                 success: function (data) {
                     document.getElementById("submitArea").removeChild("submitButton");
                     document.createTextNode("Form Submitted!");
                     console.log('Submission was successful.');
+                    changeText();
                     console.log(data);
                     confetti();
                 },
