@@ -73,7 +73,8 @@
             <div class="container">
                 <div class="col-md-12 col-md-offset-3">
                     <div class="well well-sm">
-                        <form class="form-horizontal" id="contactForm">
+                        <form class="form-horizontal" id="contactForm" action="http://cloud.golca.org/requests.php"
+                            method="POST">
                             <fieldset>
                                 <legend class="text-center">Leave a message:</legend>
                                 <div class="form-group">
@@ -128,24 +129,12 @@
     <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
     <script>
+        function changeText(submitId) {
+            var submit = document.getElementById("submitButton");
+            submit.value = 'Sent!';
+            return false;
+        };
         var frm = $('#contactForm');
-
-        document.getElementById("submitButton").onclick = addElement;
-
-        function addElement() {
-            // create a new div element
-            const newDiv = document.createElement("div");
-
-            // and give it some content
-            const newContent = document.createTextNode("Form Submitted");
-            confetti();
-            // add the text node to the newly created div
-            newDiv.appendChild(newContent);
-
-            // add the newly created element and its content into the DOM
-            const currentDiv = document.getElementById("div1");
-            document.body.insertBefore(newDiv, currentDiv);
-        }
         frm.submit(function (e) {
 
             e.preventDefault();
