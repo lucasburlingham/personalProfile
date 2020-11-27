@@ -25,25 +25,33 @@
     <link rel="stylesheet" href="water.min.css" />
 
 
-
+    <style>
+        body {
+            background-image: radial-gradient(circle at center center,
+                    rgba(33, 33, 33, 0), rgb(33, 33, 33)),
+                repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px),
+                repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px,
+                    transparent 6px),
+                linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+        }
+    </style>
 </head>
 
 <body>
     <script src="https://unpkg.com/@rocktimsaikia/github-card@2.0.0/dist/widget.min.js" type="module"></script>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand navbar-dark bg-dark border border-bottom-0 border-white">
         <ul class="nav navbar-nav">
             <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
             <li class=" nav-item"><a class="nav-link" href="#contact">Contact</a> </l>
         </ul>
     </nav>
-    <div class="jumbotron jumbotron-fluid bg-dark">
+    <div class="jumbotron jumbotron-fluid bg-dark border border-top-0 border-white">
         <div class="container">
             <h1 class="display-3" id="nameType">Lucas Burlingham</h1>
             <p class="lead" id="websiteType">Personal Portfolio and Profile</p>
             <hr class="my-2" />
             <p id="aboutType">
-                Christian, Student, Web Developer, and Prospective Systems
-                Administrator
+                Christian, Student, Web Developer, and Prospective Systems Administrator
             </p>
             <p class="lead">
                 <a class="btn btn-primary btn-md" href="https://my.indeed.com/p/lucasb-1g9vcma" target="_blank"
@@ -74,50 +82,139 @@
     </div>
     </div>
     <br>
-    <div id="contact">
-        <div class="jumbotron jumbotron-fluid bg-secondary">
 
-            <div class="container">
-                <div class="col-md-12 col-md-offset-3">
-                    <div class="well well-sm">
-                        <form class="form-horizontal" id="contactForm" name="contactForm" method="POST"
-                            action="https://cloud.golca.org/requests.php" data-netlify="true">
-                            <fieldset>
-                                <legend class="text-center" id="messageType">Leave a message:</legend>
-                                <div class="form-group">
-                                    <label class="control-label" for="name">Name</label>
+    <div class="accordion" id="accordionExample">
+        <h4>Specific Skills by Category:</h4>
+        <div class="card">
+            <div class="card-header bg-dark" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Project Specific
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group ">
+                        <li class="list-group-item list-group-item-dark">Advanced HTML - Certificate from Stoneriver
+                            E-Learning <span class="badge badge-dark"> 3 Years</span></li>
+                        <li class="list-group-item list-group-item-dark">Advanced CSS - Certificate from Stone River
+                            E-Learning <span class="badge badge-dark"> 3 Years</span></li>
+                        <li class="list-group-item list-group-item-dark">JS Experience <span class="badge badge-dark"> 1
+                                Year</span></li>
+                        <li class="list-group-item list-group-item-dark">PHP Experience <span class="badge badge-dark">
+                                1> Year</span></li>
+                        <li class="list-group-item list-group-item-dark">Bootstrap Experience <span
+                                class="badge badge-dark"> 2 Years</span></li>
+                        <li class="list-group-item list-group-item-dark">Git Workflow <span class="badge badge-dark"> 2
+                                Years</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        Systems Administration
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group ">
+                        <li class="list-group-item list-group-item-dark">*nix System Experience <span
+                                class="badge badge-dark"> 3 Years</span></li>
+                        <li class="list-group-item list-group-item-dark">Debian Based Systems <span
+                                class="badge badge-dark"> 2
+                                Years</span></li>
+                        <li class="list-group-item list-group-item-dark">RHEL Based Systems <span
+                                class="badge badge-dark"> 1>
+                                Year</span></li>
+                        <li class="list-group-item list-group-item-dark">Apache Webserver <span
+                                class="badge badge-dark"> 2 Years</span>
+                        </li>
+                        <li class="list-group-item list-group-item-dark">MySQL <span class="badge badge-dark"> 1>
+                                Year</span>
+                        </li>
+                        <li class="list-group-item list-group-item-dark">Complete LAMP Stack <span
+                                class="badge badge-dark"> 1>
+                                Year</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="true" aria-controls="collapseThree">
+                        Other Skills
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group ">
+                        <li class="list-group-item list-group-item-dark">Cleaning a Toilet <span
+                                class="badge badge-dark"> 4 Years</span></li>
+                        <li class="list-group-item list-group-item-dark">Drivers License (No moving violations) <span
+                                class="badge badge-dark">
+                                1> Year</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div id="contact">
+            <div class="jumbotron jumbotron-fluid border border-white bg-secondary">
+                <div class="container">
+                    <div class="col-md-12 col-md-offset-3">
+                        <div class="well well-sm">
+                            <form class="form-horizontal" id="contactForm" name="contactForm" method="POST"
+                                action="https://cloud.golca.org/requests.php" data-netlify="true">
+                                <fieldset>
+                                    <legend class="text-center" id="messageType">Leave a message:</legend>
                                     <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <div class="form-group">
+                                            <div class="col">
+                                                <input id="name" name="name" type="text" placeholder="Your name:"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Your E-mail</label>
                                         <div class="col">
-                                            <input id="name" name="name" type="text" placeholder="Your name"
+                                            <input id="email" name="email" type="text" placeholder="Your email:"
                                                 class="form-control">
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label" for="email">Your E-mail</label>
-                                    <div class="col">
-                                        <input id="email" name="email" type="text" placeholder="Your email"
-                                            class="form-control">
+                                    <div class="form-group">
+                                        <label class="control-label" for="message">Your message:</label>
+                                        <div class="col">
+                                            <textarea class="form-control" id="message" name="message"
+                                                placeholder="Please enter your message here..." rows="5"></textarea>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label" for="message">Your message</label>
-                                    <div class="col">
-                                        <textarea class="form-control" id="message" name="message"
-                                            placeholder="Please enter your message here..." rows="5"></textarea>
+                                    <div class="form-group">
+                                        <div class="col text-right" id="submitArea">
+                                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit"
+                                                onclick="confetti()">Submit</button>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="col text-right" id="submitArea">
-                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit"
-                                            onclick="confetti()">Submit</button>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
