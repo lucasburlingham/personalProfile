@@ -157,7 +157,8 @@
                     </button>
                 </h2>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div id="collapseThree" class="collapse border border-white" aria-labelledby="headingThree"
+                data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="list-group ">
                         <li class="list-group-item list-group-item-dark">Cleaning a Toilet <span
@@ -169,56 +170,57 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <br>
-        <div id="contact">
-            <div class="jumbotron jumbotron-fluid border border-white bg-secondary">
-                <div class="container">
-                    <div class="col-md-12 col-md-offset-3">
-                        <div class="well well-sm">
-                            <form class="form-horizontal" id="contactForm" name="contactForm" method="POST"
-                                action="https://cloud.golca.org/requests.php" data-netlify="true">
-                                <fieldset>
-                                    <legend class="text-center" id="messageType">Leave a message:</legend>
+    <br>
+    <div id="contact">
+        <div class="jumbotron jumbotron-fluid border border-white bg-secondary">
+            <div class="container">
+                <div class="col-md-12 col-md-offset-3">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" id="contactForm" name="contactForm" method="POST"
+                            action="https://cloud.golca.org/requests.php" data-netlify="true">
+                            <fieldset>
+                                <legend class="text-center" id="messageType">Leave a message:</legend>
+                                <div class="form-group">
+                                    <label class="control-label" for="name">Name</label>
                                     <div class="form-group">
-                                        <label class="control-label" for="name">Name</label>
-                                        <div class="form-group">
-                                            <div class="col">
-                                                <input id="name" name="name" type="text" placeholder="Your name:"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label" for="email">Your E-mail</label>
                                         <div class="col">
-                                            <input id="email" name="email" type="text" placeholder="Your email:"
+                                            <input id="name" name="name" type="text" placeholder="Your name:"
                                                 class="form-control">
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label" for="message">Your message:</label>
-                                        <div class="col">
-                                            <textarea class="form-control" id="message" name="message"
-                                                placeholder="Please enter your message here..." rows="5"></textarea>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Your E-mail</label>
+                                    <div class="col">
+                                        <input id="email" name="email" type="text" placeholder="Your email:"
+                                            class="form-control">
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <div class="col text-right" id="submitArea">
-                                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit"
-                                                onclick="confetti()">Submit</button>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="message">Your message:</label>
+                                    <div class="col">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Please enter your message here..." rows="5"></textarea>
                                     </div>
-                                </fieldset>
-                            </form>
-                        </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col text-right" id="submitArea">
+                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit"
+                                            onclick="confetti()">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
