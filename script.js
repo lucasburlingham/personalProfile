@@ -10,9 +10,9 @@ function addElement() {
 }
 
 $("#contactForm").ajaxForm({
-    url: 'https://cloud.golca.org/requests.php',
+    url: "https://cloud.golca.org/requests.php",
     type: 'post'
-})
+});
 
 
 new TypeIt("#nameType", {
