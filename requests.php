@@ -1,10 +1,12 @@
 <?php
 
+
 if (!(empty($_REQUEST["name"])) || !(empty($_REQUEST["email"])) || !(empty($_REQUEST["message"]))) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $subject = "From " . $name . " (" . $email . ") via Form@lucasburlingham.me";
-    $message = "The sender of this message " . $name . " has written: \r\n \r\n" .  "   " . $_POST['message'];
+    $messageBody = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
+    $message = "The sender of this message " . $name . " has written: \r\n \r\n" .  "   " . $messageBody;
     mail("lucas.burlingham@icloud.com", $subject, $message);
 } else {
     error();
@@ -31,7 +33,7 @@ if (!(empty($_REQUEST["name"])) || !(empty($_REQUEST["email"])) || !(empty($_REQ
             <p>Status: <?php
                         function error()
                         {
-                            echo "An error has occured.";
+                            echo "An error has occurred.";
                             echo "<h3>Here are the details that the server received:</h3>";
                             $email = $_POST["email"];
                             $name = $_POST["name"];
