@@ -1,56 +1,76 @@
 :root {
-    --background-body: #202b38;
-    --background: #161f27;
-    --background-alt: #1a242f;
-    --selection: #1c76c5;
-    --text-main: #dbdbdb;
-    --text-bright: #fff;
-    --text-muted: #a9b1ba;
-    --links: #41adff;
-    --focus: #0096bfab;
-    --border: #526980;
-    --code: #ffbe85;
-    --animation-duration: 0.1s;
-    --button-hover: #324759;
-    --scrollbar-thumb: var(--button-hover);
-    --scrollbar-thumb-hover: rgb(65, 92, 115);
-    --form-placeholder: #a9a9a9;
-    --form-text: #fff;
-    --variable: #d941e2;
-    --highlight: #efdb43;
-    --select-arrow: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E")
+  --background-body: #202b38;
+  --background: #161f27;
+  --background-alt: #1a242f;
+  --selection: #1c76c5;
+  --text-main: #dbdbdb;
+  --text-bright: #fff;
+  --text-muted: #a9b1ba;
+  --links: #41adff;
+  --focus: #0096bfab;
+  --border: #526980;
+  --code: #ffbe85;
+  --animation-duration: 0.1s;
+  --button-hover: #324759;
+  --scrollbar-thumb: var(--button-hover);
+  --scrollbar-thumb-hover: rgb(65, 92, 115);
+  --form-placeholder: #a9a9a9;
+  --form-text: #fff;
+  --variable: #d941e2;
+  --highlight: #efdb43;
+  --select-arrow: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E");
 }
 
 html {
-    scrollbar-color: #324759 #202b38;
-    scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-    scrollbar-width: thin
+  scrollbar-color: #324759 #202b38;
+  scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+  scrollbar-width: thin;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
-    line-height: 1.4;
-    /* margin: 20px auto; */
-    /* padding: 0 10px; */
-    word-wrap: break-word;
-    color: var(--text-main);
-    background-image: radial-gradient(circle at center center,
-            rgba(33, 33, 33, 0), rgb(33, 33, 33)),
-        repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px),
-        repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px,
-            transparent 6px),
-        linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
-    text-rendering: optimizeLegibility
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  line-height: 1.4;
+
+  word-wrap: break-word;
+  color: var(--text-main);
+  background-image: radial-gradient(
+      circle at center center,
+      rgba(33, 33, 33, 0),
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(56, 56, 56) 0px,
+      rgb(56, 56, 56) 5px,
+      transparent 5px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+  text-rendering: optimizeLegibility;
 }
 
 button {
-    transition: background-color .1s linear, border-color .1s linear, color .1s linear, box-shadow .1s linear, transform .1s ease;
-    transition: background-color var(--animation-duration) linear, border-color var(--animation-duration) linear, color var(--animation-duration) linear, box-shadow var(--animation-duration) linear, transform var(--animation-duration) ease
+  transition: background-color 0.1s linear, border-color 0.1s linear,
+    color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
+  transition: background-color var(--animation-duration) linear,
+    border-color var(--animation-duration) linear,
+    color var(--animation-duration) linear,
+    box-shadow var(--animation-duration) linear,
+    transform var(--animation-duration) ease;
 }
 
 h1 {
-    font-size: 2.2em;
-    margin-top: 0
+  font-size: 2.2em;
+  margin-top: 0;
 }
 
 h1,
@@ -59,8 +79,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 12px;
-    margin-top: 24px
+  margin-bottom: 12px;
+  margin-top: 24px;
 }
 
 b,
@@ -70,188 +90,200 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600
+  font-weight: 600;
 }
 
 button {
-    cursor: pointer
+  cursor: pointer;
 }
 
 button {
-    color: #fff;
-    color: var(--form-text);
-    background-color: #161f27;
-    background-color: var(--background);
-    font-family: inherit;
-    font-size: inherit;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    outline: 0
+  color: #fff;
+  color: var(--form-text);
+  background-color: #161f27;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: 0;
 }
 
 ::-moz-placeholder {
-    color: #a9a9a9;
-    color: var(--form-placeholder)
+  color: #a9a9a9;
+  color: var(--form-placeholder);
 }
 
 :-ms-input-placeholder {
-    color: #a9a9a9;
-    color: var(--form-placeholder)
+  color: #a9a9a9;
+  color: var(--form-placeholder);
 }
 
 ::-ms-input-placeholder {
-    color: #a9a9a9;
-    color: var(--form-placeholder)
+  color: #a9a9a9;
+  color: var(--form-placeholder);
 }
 
 ::placeholder {
-    color: #a9a9a9;
-    color: var(--form-placeholder)
+  color: #a9a9a9;
+  color: var(--form-placeholder);
 }
 
 code {
-    background: #161f27;
-    background: var(--background);
-    color: #ffbe85;
-    color: var(--code);
-    padding: 2.5px 5px;
-    border-radius: 6px;
-    font-size: 1em
+  background: #161f27;
+  background: var(--background);
+  color: #ffbe85;
+  color: var(--code);
+  padding: 2.5px 5px;
+  border-radius: 6px;
+  font-size: 1em;
 }
 
 kbd {
-    background: #161f27;
-    background: var(--background);
-    border: 1px solid #526980;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    color: #dbdbdb;
-    color: var(--text-main);
-    padding: 2px 4px 2px 4px
+  background: #161f27;
+  background: var(--background);
+  border: 1px solid #526980;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: #dbdbdb;
+  color: var(--text-main);
+  padding: 2px 4px 2px 4px;
 }
 
 hr {
-    border: none;
-    border-top: 1px solid #526980;
-    border-top: 1px solid var(--border)
+  border: none;
+  border-top: 1px solid #526980;
+  border-top: 1px solid var(--border);
 }
 
 ::-webkit-scrollbar {
-    height: 10px;
-    width: 10px
+  height: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #161f27;
-    background: var(--background);
-    border-radius: 6px
+  background: #161f27;
+  background: var(--background);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #324759;
-    background: var(--scrollbar-thumb);
-    border-radius: 6px
+  background: #324759;
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #415c73;
-    background: var(--scrollbar-thumb-hover)
+  background: #415c73;
+  background: var(--scrollbar-thumb-hover);
 }
 
 ::-moz-selection {
-    background-color: #1c76c5;
-    background-color: var(--selection);
-    color: #fff;
-    color: var(--text-bright)
+  background-color: #1c76c5;
+  background-color: var(--selection);
+  color: #fff;
+  color: var(--text-bright);
 }
 
 ::selection {
-    background-color: #1c76c5;
-    background-color: var(--selection);
-    color: #fff;
-    color: var(--text-bright)
+  background-color: #1c76c5;
+  background-color: var(--selection);
+  color: #fff;
+  color: var(--text-bright);
 }
 
 @media print {
+  body,
+  button,
+  code {
+    background-color: #fff;
+  }
 
-    body,
-    button,
-    code {
-        background-color: #fff
-    }
+  button {
+    border: 1px solid #000;
+  }
 
-    button {
-        border: 1px solid #000
-    }
-
-    body,
-    button,
-    code,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: #000
-    }
-
+  body,
+  button,
+  code,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+  }
 }
 
 body {
-    background-image: radial-gradient(circle at center center,
-            rgba(33, 33, 33, 0), rgb(33, 33, 33)),
-        repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px),
-        repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px,
-            transparent 6px),
-        linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+  background-image: radial-gradient(
+      circle at center center,
+      rgba(33, 33, 33, 0),
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(56, 56, 56) 0px,
+      rgb(56, 56, 56) 5px,
+      transparent 5px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
 }
 
 #dark {
-    background: #343A40;
+  background: #343a40;
 }
 
 #lighter {
-    background: #99a1a6;
+  background: #99a1a6;
 }
 
 #messageType {
-    font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 .cover {
-    background-color: #8da7be;
+  background-color: #8da7be;
 }
 
 .btn-outline-discord {
-    outline-color: #7289DA;
-    color: #7289DA;
+  outline-color: #7289da;
+  color: #7289da;
 }
 
 .btn-outline-discord:hover {
-    background-color: #7289DA;
-    color: white;
+  background-color: #7289da;
+  color: white;
 }
 
 .btn-outline-reddit {
-    outline-color: #FF4500;
-    color: #FF4500;
+  outline-color: #ff4500;
+  color: #ff4500;
 }
 
 .btn-outline-reddit:hover {
-    background-color: #FF4500;
-    color: white;
+  background-color: #ff4500;
+  color: white;
 }
 
 #githubIcon {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 #linkedinIcon {
-    width: 38px;
-    height: 32px;
+  width: 38px;
+  height: 32px;
 }
