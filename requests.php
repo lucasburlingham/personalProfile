@@ -4,7 +4,7 @@ if (!(empty($_REQUEST["name"])) || !(empty($_REQUEST["email"])) || !(empty($_REQ
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = "From " . $name . " (" . $email . ") via Form@lucasburlingham.me";
-    $message = "The sender of this message " . $name . " has written: \r\n" . $_POST['message'];
+    $message = "The sender of this message " . $name . " has written: \r\n \r\n" .  "   " . $_POST['message'];
     mail("lucas.burlingham@icloud.com", $subject, $message);
 } else {
     error();
