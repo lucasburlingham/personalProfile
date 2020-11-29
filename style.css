@@ -200,9 +200,11 @@ hr {
   code {
     background-color: #fff;
   }
+
   button {
     border: 1px solid #000;
   }
+
   body,
   button,
   code,
