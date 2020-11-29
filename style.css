@@ -1,27 +1,4 @@
-::-moz-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-:-ms-input-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-::-ms-input-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-::placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
 :root {
-  --background-body: #202b38;
-  --background: #161f27;
-  --background-alt: #1a242f;
   --selection: #1c76c5;
   --text-main: #dbdbdb;
   --text-bright: #fff;
@@ -181,13 +158,6 @@ hr {
 }
 
 ::-moz-selection {
-  background-color: #1c76c5;
-  background-color: var(--selection);
-  color: #fff;
-  color: var(--text-bright);
-}
-
-::selection {
   background-color: #1c76c5;
   background-color: var(--selection);
   color: #fff;
