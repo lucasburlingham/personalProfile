@@ -1,3 +1,23 @@
+::-moz-placeholder {
+  color: #a9a9a9;
+  color: var(--form-placeholder);
+}
+
+:-ms-input-placeholder {
+  color: #a9a9a9;
+  color: var(--form-placeholder);
+}
+
+::-ms-input-placeholder {
+  color: #a9a9a9;
+  color: var(--form-placeholder);
+}
+
+::placeholder {
+  color: #a9a9a9;
+  color: var(--form-placeholder);
+}
+
 :root {
   --background-body: #202b38;
   --background: #161f27;
@@ -111,26 +131,6 @@ button {
   outline: 0;
 }
 
-::-moz-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-:-ms-input-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-::-ms-input-placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
-::placeholder {
-  color: #a9a9a9;
-  color: var(--form-placeholder);
-}
-
 code {
   background: #161f27;
   background: var(--background);
@@ -200,11 +200,9 @@ hr {
   code {
     background-color: #fff;
   }
-
   button {
     border: 1px solid #000;
   }
-
   body,
   button,
   code,
