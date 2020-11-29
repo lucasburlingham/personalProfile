@@ -3,6 +3,7 @@
 </p>
 
 Website Statistics:<br>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/08c3eefbe61e45d2ab802d89680791d8)](https://app.codacy.com/gh/lucasburlingham/personalProfile?utm_source=github.com&utm_medium=referral&utm_content=lucasburlingham/personalProfile&utm_campaign=Badge_Grade)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/10028731-e31a-46af-8d9a-da10818f9066/deploy-status)](https://app.netlify.com/sites/lucasburlingham/deploys) ![visitors](https://visitor-badge.glitch.me/badge?page_id=lucasburlingham.visitor-badge)
 
 [Google Lighthouse Results](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A%2F%2Flucasburlingham.netlify.app%2F)
