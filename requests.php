@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_POST['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = "From" . $name . $email . "Personal Page Form";
