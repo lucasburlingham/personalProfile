@@ -71,9 +71,17 @@
                                                     href="https://reddit.com/u/simondanerd" target="_blank"
                                                     role="button">u/simondanerd
                                                     Reddit</a>
-                                                <a class="btn btn-outline-discord" href="https://discord.com/"
-                                                    target="_blank" role="button">simondanerd#3096
-                                                    Discord</a>
+                                                <button class="btn btn-outline-discord" role="button" onclick="clip()"
+                                                    value="simondanerd#3096" type="text">simondanerd#3096
+                                                    Discord</button>
+                                                <input type="text" class="hidden" value="simondanerd#3096"
+                                                    id="discordClip">
+                                                <div class="alert alert-dark alert-dismissible hidden" id="discordAlert"
+                                                    name="clipping">
+                                                    <a href="#" class="close" data-dismiss="alert"
+                                                        aria-label="close">&times;</a>
+                                                    <strong>Username Copied!</strong>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -340,6 +348,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
         defer>
