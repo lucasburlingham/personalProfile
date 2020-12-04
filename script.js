@@ -56,3 +56,8 @@ function clip() {
     console.log("Copied the text. Displaying alert now...");
     document.getElementById("discordAlert").style.display = "inherit";
 }
+
+$('[data-toggle="popover"]').popover({
+    placement: 'top',
+    trigger: 'hover'
+});
