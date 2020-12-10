@@ -26,6 +26,7 @@ if (!(empty($_REQUEST["name"])) || !(empty($_REQUEST["email"])) || !(empty($_REQ
 <html lang="en">
 
 <head>
+    <meta http-equiv="Cache-Control" content="no-store" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
@@ -53,9 +54,11 @@ if (!(empty($_REQUEST["name"])) || !(empty($_REQUEST["email"])) || !(empty($_REQ
                             }
                             $recentOutput = "recentOutput.txt";
                             $lines = file($recentOutput);
-                            echo "Email: " . $lines[0] . "<br>";
-                            echo "Message: " . $lines[1] . "<br>";
-                            echo "Name: " . $lines[2 . "<br>"];
+                            echo "<b>Name:</b> " . $lines[0] . "<br>";
+                            echo "<b>Email:</b> " . $lines[1] . "<br>";
+                            echo "<b>Start of Message:</b> " . $lines[2] . "<br>";
+                            echo $lines[3] . "<br>";
+                            echo $lines[4] . "<br>";
                         }
 
                         function recentFileCheck()
