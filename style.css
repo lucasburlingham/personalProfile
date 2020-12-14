@@ -229,8 +229,8 @@ body {
 }
 
 .btn-outline-discord {
-  outline-color: #7289da !important;
-  color: #7289da !important;
+  outline-color: #7289da;
+  color: #7289da;
 }
 
 .btn-outline-discord:hover {
@@ -240,12 +240,12 @@ body {
 }
 
 .btn-outline-reddit {
-  outline-color: #ff4500 !important;
-  color: #ff4500 !important;
+  outline-color: #ff4500;
+  color: #ff4500;
 }
 
 .btn-outline-reddit:hover {
-  background-color: #ff4500 !important;
+  background-color: #ff4500;
   color: #ffffff;
 }
 
