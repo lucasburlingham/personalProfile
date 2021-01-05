@@ -6,6 +6,7 @@
         "burlingham",
         "cpath",
         "csvg",
+        "data",
         "haslogintext",
         "icon",
         "jovark",
@@ -14,7 +15,10 @@
         "preconnect",
         "readyforwork",
         "simondanerd",
+        "sitekey",
+        "statuspage",
         "tooltiptext",
+        "widget",
         "xlink"
     ]
 }

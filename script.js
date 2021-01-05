@@ -61,3 +61,7 @@ $('[data-toggle="popover"]').popover({
     placement: 'top',
     trigger: 'hover'
 });
+
+function onSubmit(token) {
+    document.getElementById("contactForm").submit();
+}

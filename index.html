@@ -320,12 +320,10 @@
 
                                             <div class="form-group">
                                                 <div class="col text-right" id="submitArea">
-                                                    <div class="g-recaptcha"
-                                                        data-sitekey="6LdcQiIaAAAAAH6vxZK2uJkosGnSI3SCQvqlEZyu">To make
-                                                        my life easier:</div>
-                                                    <br>
                                                     <button class="btn btn-primary btn-lg" id="submitButton"
-                                                        type="submit" onclick="confetti()">Submit</button>
+                                                        type="submit" onclick="confetti()"
+                                                        data-sitekey="6LfMRSIaAAAAAD9X9Zmy9_wI17wbhCxrNNmVz66t"
+                                                        data-callback='onSubmit' data-action='submit'>Submit</button>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -398,7 +396,8 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
     <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
+    </script>
 </body>
 
 </html>
