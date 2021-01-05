@@ -9,10 +9,10 @@ function addElement() {
     document.body.insertBefore(newDiv, currentDiv);
 }
 
-$("#contactForm").ajaxForm({
-    url: "https://cloud.golca.org/requests.php",
-    type: 'post'
-});
+// $("#contactForm").ajaxForm({
+//     url: "https://cloud.golca.org/requests.php",
+//     type: 'post'
+// });
 
 
 new TypeIt("#nameType", {
