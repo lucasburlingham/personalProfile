@@ -1,16 +1,29 @@
 <html>
 
 <head>
-        <title>reCAPTCHA demo: Simple page</title>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+        <script type="text/javascript">
+                var onloadCallback = function () {
+                        grecaptcha.render('html_element', {
+                                'sitekey': '6LdpSSIaAAAAAKCYLKeaXdmAn6pyt5n1Zkm7Du1e'
+                        });
+                };
+        </script>
 </head>
 
 <body>
         <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="6LdpSSIaAAAAAKCYLKeaXdmAn6pyt5n1Zkm7Du1e"></div>
-                <br />
+                <div id="html_element"></div>
+                <br>
                 <input type="submit" value="Submit">
         </form>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+        </script>
+        <script type="text/javascript">
+                var onloadCallback = function () {
+                        alert("grecaptcha is ready!");
+                };
+        </script>
 </body>
 
 </html>
