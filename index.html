@@ -15,6 +15,7 @@
     <meta name="author" content="Lucas Burlingham">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 
 <body>
@@ -64,19 +65,16 @@
                                                     href="https://reddit.com/u/simondanerd" target="_blank"
                                                     role="button">u/simondanerd
                                                     Reddit</a>
-                                                <a class="btn btn-outline-discord" onclick="clip()"
-                                                    data-value="simondanerd#3096" type="text" data-toggle="popover"
-                                                    data-placement="top"
-                                                    title="Click to copy username...">simondanerd#3096
-                                                    Discord</a>
-                                                <input type="text" class="hidden" value="simondanerd#3096"
-                                                    id="discordClip">
-                                                <div class="alert alert-info alert-dismissible hidden" id="discordAlert"
-                                                    name="clipping">
-                                                    <a href="#" class="close" data-dismiss="alert"
-                                                        aria-label="close">&times;</a>
-                                                    <strong>Username Copied!</strong>
-                                                </div>
+
+
+                                                <button class="btn btn-outline-discord"
+                                                    data-clipboard-text="simondanerd#3096">
+                                                    simondanerd#3096 Discord
+                                                </button>
+                                                <script>
+                                                    new ClipboardJS(
+                                                        ".btn"); // note that here you need to instanciate the button
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +352,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
         defer>
