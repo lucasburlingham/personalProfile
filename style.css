@@ -3518,6 +3518,14 @@ body {
   background-color: #ff4500;
   color: #fff;
 }
+.btn-outline-element {
+  background-color: #0dbd8b;
+  color: #fff;
+}
+.btn-outline-element:hover {
+  background-color: white;
+  color: #0dbd8b;
+}
 #githubIcon {
   width: 32px;
   height: 32px;
