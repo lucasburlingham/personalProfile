@@ -3519,12 +3519,12 @@ body {
   color: #fff;
 }
 .btn-outline-element {
+  color: #0dbd8b;
+}
+
+.btn-outline-element:hover {
   background-color: #0dbd8b;
   color: #fff;
-}
-.btn-outline-element:hover {
-  background-color: white;
-  color: #0dbd8b;
 }
 #githubIcon {
   width: 32px;
@@ -3544,4 +3544,9 @@ body {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/comfortaa/v29/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4VrMPrQ.ttf)
     format("truetype");
+}
+.nohover:extend(a:hover) {}
+
+padding-up {
+
 }
