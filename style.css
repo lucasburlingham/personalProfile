@@ -9435,7 +9435,7 @@ body {
 }
 .dark {
   background: #343a40;
-  color: #fff;
+  color: #ffffff;
 }
 #lighter {
   background: #99a1a6;
@@ -9463,7 +9463,6 @@ body {
 .btn-outline-element {
   color: #0dbd8b;
 }
-
 .btn-outline-element:hover {
   background-color: #0dbd8b;
   color: #fff;
@@ -9490,6 +9489,12 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+.jumbotron-fluid {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
