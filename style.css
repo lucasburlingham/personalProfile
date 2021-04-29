@@ -4353,17 +4353,15 @@ fieldset:disabled .btn {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
 }
-.badge {
-  display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
+.badge-dark {
   color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
+  background-color: #343a40;
+}
+.badge-dark[href]:focus,
+.badge-dark[href]:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1d2124;
 }
 .badge:empty {
   display: none;
