@@ -58,13 +58,15 @@ if (militaryDate >= '20220308' && militaryDate < '20220621') {
 	nextElement.textContent = "First Duty Station";
 	embedCodeURL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215611.65197861285!2d-84.97059490191943!3d32.394182815403425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f32e5b142e7fc5%3A0x857eb2e636097817!2sFort%20Benning!5e0!3m2!1sen!2sus!4v1653784315121!5m2!1sen!2sus';
 	embedCode = '<iframe class="gmap-iframe" src="' + embedCodeURL + 'loading="lazy" frameborder="0" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-} else if (militaryDate >= '20230130') {
+} else if (militaryDate >= '20230217') {
 	completingElement.textContent = "Airborne School";
 	locationElement.textContent = "Fort Benning, GA";
 	nextElement.textContent = "First Duty Station";
 	mapElement = document.getElementById("mapElement");
 	mapElement.classList.add("center-h");
 	mapElement.innerHTML = 'I have completed all 32 weeks, 3 days of training. <br> Please visit my <a href="https://militaryjobtool.info/bases/">Military Job Tool</a> for a list of bases I could be at.';
+} else {
+	completingElement.textContent = "First Duty Station";
 }
 
 
