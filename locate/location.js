@@ -46,14 +46,14 @@ if (militaryDate >= '20220308' && militaryDate < '20220621') {
 	nextElement.textContent = "Advanced Individal Training";
 	embedCodeURL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105849.37492624055!2d-81.09081628359372!3d33.9978512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8a35668bbbc5b%3A0xf35a1265332e988e!2sFort%20Jackson!5e0!3m2!1sen!2sus!4v1653783354993!5m2!1sen!2sus'
 	embedCode = '<iframe class="gmap-iframe" src="' + embedCodeURL + 'loading="lazy" frameborder="0" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-} else if (militaryDate >= '20220902' && militaryDate <= '20230131') {
+} else if (militaryDate >= '20220902' && militaryDate <= '20230202') {
 	// After basic training, at AIT
 	completingElement.textContent = "Advanced Individual Training";
 	locationElement.textContent = "Fort Gordon, GA";
 	nextElement.textContent = "Airborne School";
 	embedCodeURL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53282.41035737506!2d-82.14833321160832!3d33.41931660073502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f9d6fb689b1bab%3A0xcc97255528f4175b!2sFort%20Gordon%2C%20Augusta%2C%20GA%2030905!5e0!3m2!1sen!2sus!4v1653784253399!5m2!1sen!2sus';
 	embedCode = '<iframe class="gmap-iframe" src="' + embedCodeURL + 'loading="lazy" frameborder="0" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-} else if (militaryDate >= '20230130' && militaryDate < '20230217') {
+} else if (militaryDate >= '20230203' && militaryDate < '20230217') {
 	// After AIT, at Airborne
 	completingElement.textContent = "Airborne School";
 	locationElement.textContent = "Fort Benning, GA";
