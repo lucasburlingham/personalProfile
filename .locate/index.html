@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Lucas Burlingham</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="name center-h font-roboto-mono container" id="statusbar">
+		<div class="col-12">
+			Current Location: <span id="locationElement"></span><br>
+			I am completing: <span id="completingElement"></span><br>
+			Next, I will be going to: <span id="nextElement"></span><br>
+			Today: <span id="dateElement"></span>
+		</div>
+	</div>
+	<div class="name font-roboto-mono container">
+		<div class="col-12" id="mapElement">
+		</div>
+	</div>
+	<hr class="text-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<div class="center-h font-roboto copy text-white">
+					<table class="table table-dark">
+						<thead class="thead-dark">
+							<tr>
+								<th>Date</th>
+								<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>June 20, 2022 PM</td>
+								<td>Home &#129062; Bloomington Recruiting Station &#129062; Indianapolis
+									<span target="_self" data-bs-toggle="tooltip" data-bs-placement="top"
+										title="Military Entrance Processing Station">MEPS</span> &#129062; Hotel
+								</td>
+							</tr>
+							<tr>
+								<td>June 21, 2022 AM</td>
+								<td>Hotel &#129062; Indianapolis MEPS &#129062; IND Airport</td>
+							</tr>
+							<tr>
+								<td>June 21, 2022 PM</td>
+								<td>CAD Airport &#129062; Fort Jackson, SC</td>
+							</tr>
+							<tr>
+								<td>June 27, 2022 PM</td>
+								<td>Fort Jackson, SC (Processing)</td>
+							</tr>
+							<tr>
+								<td>June 27, 2022 AM</td>
+								<td>Fort Jackson, SC (Basic Training)</td>
+							</tr>
+							<tr>
+								<td>September 02, 2022</td>
+								<td>Fort Jackson, SC (Graduation & Family Day) &#129062; Fort Gordon, GA</td>
+							</tr>
+							<tr>
+								<td>September 07, 2022</td>
+								<td>Fort Gordon, GA (Advanced Training)</td>
+							</tr>
+							<tr>
+								<td>January 31, 2023</td>
+								<td>Fort Gordon, GA (Advanced Training Graduation) &#129062; Fort Benning, GA</td>
+							</tr>
+							<tr>
+								<td>January 31, 2023</td>
+								<td>Fort Benning, GA (Airborne School)</td>
+							</tr>
+							<tr>
+								<td>February 17, 2023</td>
+								<td>Fort Benning, GA (Airborne Graduation) &#129062; First Duty Station</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr class="text-italic muted">
+								<td>Contact:</td>
+								<td>
+									<a class="nodecoration" href="https://instagram.com/simondanerd/"
+										target="_blank">@simondanerd</a> on Instagram
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	</div>
+	<p class="center-h font-roboto text-italic muted">
+		<a href="https://docs.google.com/document/d/1hAYq1pVMH30fY-jxgJG_r7z8ZLuSG2E5agTcnkf8KS4/edit?usp=sharing"
+			target="_blank" rel="noopener nofollow noreferrer" class="muted">An Untitled Document</a> |
+		Page &copy; Lucas Burlingham 2022
+	</p>
+
+
+
+	<script src="location.js"></script>
+
+</body>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+	@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+
+	.gmap-iframe {
+		margin-top: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+		height: 50%;
+		width: 100%;
+		border: none;
+	}
+
+	.mt-1 {
+		margin-top: 1.5em;
+	}
+
+	.text-italic {
+		font-style: italic;
+	}
+
+	.font-roboto-mono {
+		font-family: Roboto Mono, monospace;
+		color: #FFFFFF88;
+	}
+
+	.font-roboto {
+		font-family: Roboto, sans-serif;
+	}
+
+	.center-h {
+		text-align: center;
+		justify-content: center;
+		margin: auto;
+	}
+
+	.center-all {
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+
+	p.name {
+		font-size: 2rem;
+		color: #F32708;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	body {
+		background-color: #2A3439;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.select {
+		-webkit-touch-callout: text;
+		-webkit-user-select: text;
+		-khtml-user-select: text;
+		-moz-user-select: text;
+		-ms-user-select: texttext;
+		user-select: text;
+	}
+
+	.copy {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		color: white;
+		text-align: center;
+		color: white;
+	}
+
+	.muted {
+		color: #FFFFFF88;
+	}
+
+	a:visited {
+		color: #FFFFFF88;
+	}
+
+	#statusbar {
+		margin-top: 2px;
+		color: #FFFFFF88;
+	}
+
+	#statusbar a:hover {
+		color: #FFFFFF;
+	}
+
+	.nodecoration {
+		text-decoration: none;
+		color: inherit;
+	}
+</style>
+
+</html>
